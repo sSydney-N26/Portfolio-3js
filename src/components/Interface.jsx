@@ -8,15 +8,18 @@ import { BallCanvas } from "./canvas";
 import { JobTimeline } from "./WorkExperience.jsx";
 
 const Section = (props) => {
-  const { children } = props;
+  const { children, mobileTop } = props;
 
   return (
-    <motion.section className="w-screen p-5 ml-10 mr-10 max-w-screen-2xl min-h-screen mx-auto
-     flex flex-col items-start justify-center"
+    <motion.section className={`w-screen p-5 ml-10 mr-10 max-w-screen-2xl min-h-screen mx-auto
+     flex flex-col items-start justify-center
+     ${mobileTop ? "justify-start md:justify-center" : "justify-center"}`}
      initial={{
         opacity: 0,  // Initially, no scene
         y: 50 // Where it starts fading in
      }}
+
+     
      whileInView={{
         opacity: 1,
         y: 0,
@@ -32,8 +35,9 @@ const Section = (props) => {
 
 const EntryPage = () => {
   return (
-    <Section>
-      <motion.h1 className="text-5xl text-center ml-12 text-gray-900 font-extrabold"
+    <Section mobileTop>
+      <motion.h1 className="text-5xl md:text-6xl text-center ml-12 text-gray-900 font-extrabold
+      leading-snug mt-8"
            initial={{
             opacity: 0,  
             y: 25 
