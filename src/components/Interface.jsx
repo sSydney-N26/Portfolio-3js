@@ -55,7 +55,7 @@ const EntryPage = () => {
         <span className="text-4xl font-extrabold text-pink-700 px-1 py-1 bg-white 
         italic inline-block rounded-lg shadow-lg"> Sydney ! </span>
         </motion.h1>
-        <motion.p className="text-center text-gray-700 my-5 mx-5 md:text-[15px] sm:text-[10px] xs:text-[12px] text-[10px]"
+        <motion.p className="text-center text-gray-700 my-5 mx-10 md:text-[15px] sm:text-[10px] xs:text-[12px] text-[10px]"
            initial={{
             opacity: 0,  
             y: 25,
@@ -78,7 +78,7 @@ const EntryPage = () => {
         <br />
         user experiences at my workplace.
         </motion.p>
-        <motion.button className="text-white bg-pink-700 ml-10 py-4 px-12 rounded-lg font-bold text-lg mt-2"
+        <motion.button className="text-white bg-pink-700 ml-14 py-4 px-12 rounded-lg font-bold text-lg mt-2"
            initial={{
             opacity: 0,
             y: 50 
