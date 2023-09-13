@@ -1,8 +1,9 @@
 import React from "react";
-import { textVariant } from "../utils/motion.js";
+//import { textVariant } from "../utils/motion.js";
 import { motion } from "framer-motion";
 import { technologies } from "../constants/work.js";
 import { BallCanvas } from "./canvas";
+
 
 const Section = (props) => {
   const { children } = props;
@@ -45,9 +46,10 @@ const EntryPage = () => {
          }}>
         Hi, I am
         <br />
-        <span className="text-4xl font-extrabold text-pink-700 px-1 py-1 bg-white italic inline-block rounded-lg shadow-lg"> Sydney ! </span>
+        <span className="text-4xl font-extrabold text-pink-700 px-1 py-1 bg-white 
+        italic inline-block rounded-lg shadow-lg"> Sydney ! </span>
         </motion.h1>
-        <motion.p className="text-lg text-gray-600 my-5 mx-5"
+        <motion.p className="text-center text-gray-600 my-5 mx-5 md:text-[15px] sm:text-[10px] xs:text-[12px] text-[10px]"
            initial={{
             opacity: 0,  
             y: 25,
@@ -88,19 +90,6 @@ const EntryPage = () => {
   );
 };
 
-const Work = () => {
-  return (
-    <Section>
-      <motion.div variants={textVariant()}>
-        <p className="text-gray-700 text-lg mr-12">What I Have Done So Far</p>
-        <h2 className="text-gray-900 font-extrabold md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
-          Work Experience
-        </h2>
-      </motion.div>
-    </Section>
-  );
-};
-
 const SkillsSection = () => {
     return (
       <Section>
@@ -119,7 +108,7 @@ const SkillsSection = () => {
                 initial={{
                     opacity: 1,
                 }}
-                whileinView={{
+                whileInView={{
                     opacity: 1,
                     transition: {
                         duration: 1,
@@ -134,8 +123,7 @@ const SkillsSection = () => {
       </Section>
     );
   };
-  
-  
+
 
 const ContactsSection = () => {
   return (
@@ -186,7 +174,6 @@ export const Interface = () => {
     <div className="flex flex-col items-center w-screen">
       <EntryPage />
       <SkillsSection />
-      <Work />
       <ContactsSection />
     </div>
   );
