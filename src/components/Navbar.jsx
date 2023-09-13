@@ -29,9 +29,10 @@ export const Nav = (props) => {
         >
           <div className="flex-1 flex items-start justify-center flex-col gap-6 p-8">
             <MenuTitles label="About" onClick={() => onSectionChange(0)} />
-            <MenuTitles label="Skills" onClick={() => onSectionChange(1)} />
+            <MenuTitles label="Experience" onClick={() => onSectionChange(1)} />
+            <MenuTitles label="Skills" onClick={() => onSectionChange(4)} />
             <MenuTitles label="Projects" onClick={() => onSectionChange(3)} />
-            <MenuTitles label="Contact" onClick={() => onSectionChange(5)} />
+            <MenuTitles label="Contact" onClick={() => onSectionChange(6)} />
           </div>
         </div>
       </>

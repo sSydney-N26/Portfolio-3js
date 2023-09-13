@@ -3,7 +3,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { technologies } from "../constants/work.js";
 import { BallCanvas } from "./canvas";
-
+//import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+//import 'react-vertical-timeline-component/style.min.css';
+import { JobTimeline } from "./WorkExperience.jsx";
 
 const Section = (props) => {
   const { children } = props;
@@ -49,7 +51,7 @@ const EntryPage = () => {
         <span className="text-4xl font-extrabold text-pink-700 px-1 py-1 bg-white 
         italic inline-block rounded-lg shadow-lg"> Sydney ! </span>
         </motion.h1>
-        <motion.p className="text-center text-gray-600 my-5 mx-5 md:text-[15px] sm:text-[10px] xs:text-[12px] text-[10px]"
+        <motion.p className="text-center text-gray-700 my-5 mx-5 md:text-[15px] sm:text-[10px] xs:text-[12px] text-[10px]"
            initial={{
             opacity: 0,  
             y: 25,
@@ -89,6 +91,7 @@ const EntryPage = () => {
     </Section>
   );
 };
+
 
 const SkillsSection = () => {
     return (
@@ -169,10 +172,19 @@ const ContactsSection = () => {
   );
 };
 
+const Work = () => {
+  return (
+    <Section>
+      <JobTimeline />
+    </Section>
+  )
+}
+
 export const Interface = () => {
   return (
     <div className="flex flex-col items-center w-screen">
       <EntryPage />
+      <Work />
       <SkillsSection />
       <ContactsSection />
     </div>

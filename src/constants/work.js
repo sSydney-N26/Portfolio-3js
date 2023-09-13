@@ -26,6 +26,11 @@ import {
 } from "../assets";
 
 import c from "/src/assets/tech/c.png"
+import cplus from "/src/assets/tech/cplus.png"
+import python from "/src/assets/tech/python.png"
+import sql from "/src/assets/tech/sql.png";
+import azure from "/src/assets/tech/azure.png"
+
 
 export const navLinks = [
   {
@@ -67,6 +72,18 @@ const technologies = [
     icon: c,
   },
   {
+    name: "C++",
+    icon: cplus,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "Azure",
+    icon: azure,
+  },
+  {
     name: "HTML 5",
     icon: html,
   },
@@ -79,16 +96,8 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
   },
   {
     name: "Tailwind CSS",
@@ -99,10 +108,6 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
     name: "Three JS",
     icon: threejs,
   },
@@ -111,12 +116,12 @@ const technologies = [
     icon: git,
   },
   {
-    name: "Figma",
-    icon: figma,
+    name: "SQL",
+    icon: sql,
   },
   {
-    name: "Docker",
-    icon: docker,
+    name: "Figma",
+    icon: figma,
   },
 ];
 
