@@ -31,7 +31,6 @@ export const Nav = (props) => {
             <MenuTitles label="About" onClick={() => onSectionChange(0)} />
             <MenuTitles label="Experience" onClick={() => onSectionChange(1)} />
             <MenuTitles label="Skills" onClick={() => onSectionChange(4)} />
-            <MenuTitles label="Projects" onClick={() => onSectionChange(3)} />
             <MenuTitles label="Contact" onClick={() => onSectionChange(6)} />
           </div>
         </div>

@@ -8,18 +8,15 @@ import { BallCanvas } from "./canvas";
 import { JobTimeline } from "./WorkExperience.jsx";
 
 const Section = (props) => {
-  const { children, mobileTop } = props;
+  const { children } = props;
 
   return (
-    <motion.section className={`w-screen p-5 ml-10 mr-10 max-w-screen-2xl min-h-screen mx-auto
-     flex flex-col items-start justify-center
-     ${mobileTop ? "justify-start md:justify-center" : "justify-center"}`}
+    <motion.section className="w-screen p-5 ml-10 mr-10 max-w-screen-2xl min-h-screen mx-auto
+     flex flex-col items-start justify-center"
      initial={{
         opacity: 0,  // Initially, no scene
         y: 50 // Where it starts fading in
      }}
-
-     
      whileInView={{
         opacity: 1,
         y: 0,
@@ -35,9 +32,8 @@ const Section = (props) => {
 
 const EntryPage = () => {
   return (
-    <Section mobileTop>
-      <motion.h1 className="text-5xl md:text-6xl text-center ml-12 text-gray-900 font-extrabold
-      leading-snug mt-8"
+    <Section>
+      <motion.h1 className="text-5xl text-center ml-11 text-gray-900 font-extrabold"
            initial={{
             opacity: 0,  
             y: 25 
@@ -55,7 +51,7 @@ const EntryPage = () => {
         <span className="text-4xl font-extrabold text-pink-700 px-1 py-1 bg-white 
         italic inline-block rounded-lg shadow-lg"> Sydney ! </span>
         </motion.h1>
-        <motion.p className="text-center text-gray-700 my-5 mx-10 md:text-[15px] sm:text-[10px] xs:text-[12px] text-[10px]"
+        <motion.p className="text-center text-gray-700 my-5 mx-5 md:text-[15px] sm:text-[10px] xs:text-[12px] text-[10px]"
            initial={{
             opacity: 0,  
             y: 25,
@@ -78,7 +74,7 @@ const EntryPage = () => {
         <br />
         user experiences at my workplace.
         </motion.p>
-        <motion.button className="text-white bg-pink-700 ml-14 py-4 px-12 rounded-lg font-bold text-lg mt-2"
+        <motion.button className="text-white bg-pink-700 ml-10 py-4 px-12 rounded-lg font-bold text-lg mt-2"
            initial={{
             opacity: 0,
             y: 50 
