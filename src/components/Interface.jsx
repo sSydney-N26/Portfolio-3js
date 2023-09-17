@@ -188,7 +188,7 @@ export const Interface = () => {
     <div className="flex flex-col items-center w-screen">
       <EntryPage />
       <Work />
-      <SkillsSection />
+      
       <ContactsSection />
     </div>
   );
