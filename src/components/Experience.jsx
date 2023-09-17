@@ -50,8 +50,7 @@ export const Experience = (props) => {
     ? [isMobile ? 2.5 : 7 * devroomScaleRatio, isMobile ? -viewport.height / 6 : 0, 4]
     : [isMobile ? 2.5 : 10 * devroomScaleRatio, isMobile ? -viewport.height / 6 : 0, isMobile ? 2 : 3];
 
-  return (
-    <>
+const orbitControls = isMobile ? null : (
       <OrbitControls
         enableDamping
         dampingFactor={0.25}
@@ -61,6 +60,10 @@ export const Experience = (props) => {
         enableRotate={false}
         enablePan={false}
       />
+    );
+  return (
+    <>
+    { orbitControls }
       <motion.group
         position={position}
         scale={scale}
