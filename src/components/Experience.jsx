@@ -61,6 +61,7 @@ const orbitControls = isMobile ? null : (
         enablePan={false}
       />
     );
+    
   return (
     <>
     { orbitControls }
