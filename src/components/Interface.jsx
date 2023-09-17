@@ -8,11 +8,12 @@ import { BallCanvas } from "./canvas";
 import { JobTimeline } from "./WorkExperience.jsx";
 
 const Section = (props) => {
-  const { children } = props;
+  const { children, mobileTop } = props;
 
   return (
-    <motion.section className="w-screen p-5 ml-10 mr-10 max-w-screen-2xl min-h-screen mx-auto
-     flex flex-col items-start justify-center"
+    <motion.section className={`w-screen p-5 ml-10 mr-10 max-w-screen-2xl min-h-screen mx-auto
+     flex flex-col items-start
+     ${mobileTop ? "justify-start md:justify-center" : "justify-center"}`}
      initial={{
         opacity: 0,  // Initially, no scene
         y: 50 // Where it starts fading in
@@ -32,8 +33,8 @@ const Section = (props) => {
 
 const EntryPage = () => {
   return (
-    <Section>
-      <motion.h1 className="text-5xl text-center ml-11 text-gray-900 font-extrabold"
+    <Section mobileTop>
+      <motion.h1 className="md:text-5xl text-4xl text-center ml-11 md:ml-9 text-gray-900 font-extrabold"
            initial={{
             opacity: 0,  
             y: 25 
@@ -48,10 +49,11 @@ const EntryPage = () => {
          }}>
         Hi, I am
         <br />
-        <span className="text-4xl font-extrabold text-pink-700 px-1 py-1 bg-white 
-        italic inline-block rounded-lg shadow-lg"> Sydney ! </span>
+        <span className="text-3xl md:text-4xl font-extrabold text-pink-700 px-1 py-1 bg-white 
+        italic inline-block rounded-lg shadow-lg">  Sydney ! </span>
         </motion.h1>
-        <motion.p className="text-center text-gray-700 my-5 mx-5 md:text-[15px] sm:text-[10px] xs:text-[12px] text-[10px]"
+        <motion.p className="text-center text-gray-700 my-5 mx-10 md:my-5 md:mx-5 
+        md:text-[14px] sm:text-[12px] xs:text-[10px] text-[12px]"
            initial={{
             opacity: 0,  
             y: 25,
@@ -74,7 +76,8 @@ const EntryPage = () => {
         <br />
         user experiences at my workplace.
         </motion.p>
-        <motion.button className="text-white bg-pink-700 ml-10 py-4 px-12 rounded-lg font-bold text-lg mt-2"
+        <motion.button className="text-white bg-pink-700 ml-8 
+         py-3 px-12 rounded-lg font-bold text-lg mt-2"
            initial={{
             opacity: 0,
             y: 50 
@@ -97,7 +100,7 @@ const SkillsSection = () => {
     return (
       <Section>
         <div>
-          <p className="text-gray-700 text-lg mr-12"> My Experience </p>
+          <p className="text-gray-700 text-lg mr-12"> What I Have Worked With </p>
           <h2 className="text-gray-900 font-extrabold md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
             Skills
           </h2>

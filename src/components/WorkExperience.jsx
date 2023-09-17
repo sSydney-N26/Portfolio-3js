@@ -70,19 +70,22 @@ export const JobTimeline = () => {
                 <h3 className="mb-2 italic"> Vision Capital Corporation </h3>
                 <ul className="list-disc pl-5"> 
                     <li className="mb-2">
-                    Collaborated with the former technical lead to execute a code 
-                    repository migration from AWS to Netlify and configured the 
+                    Enhanced policy disclosures through website changes for 
+                    Vision Capital, an investment fund managing $159+ million.
+                    </li>
+                    <li className="mb-2">
+                    Returned proprietary code control to Vision Capital by migrating
+                    codebase from AWS to Netlify and configured the 
                     appropriate Node.js version for future local development.
                     </li>
                     <li className="mb-2">
-                    Created a terms acceptance page for private funds' investors
-                     using Vue.js and its directives.
+                    Reduced invalid private funds access by creating Vue.js
+                    pages that certifies investor accreditation.
                     </li>
                     <li>
-                    Improved efficiency by 25% through exporting local website
-                    components to Prismic, a Content Management System
-                    using Prismic's API. This enabled our marketing team to create
-                    pages without coding experience.
+                    Improved marketing team efficiency by integrating Prismic API 
+                    (a content management system),
+                    enabling website layout modifications without code.
                     </li>
                     </ul>
                 </VerticalTimelineElement>
@@ -117,16 +120,17 @@ export const JobTimeline = () => {
                 </h3>
                 <ul className="list-disc pl-5"> 
                     <li className="mb-2">
-                        Utilized the freemium business model, Microsoft Azure Machine Learning and Microsoft Azure
-                        Bot Services to develope a financial advisor service called MoneyMastermind.
+                    Improved financial decision-making skills of young adults by developing 
+                    and pitching a financial investment coach using Microsoft Azure Machine
+                    Learning and Microsoft Azure Bot Services.
                     </li>
                     <li className="mb-2">
-                    Utilized Microsoft Azure Machine Learning modules, including Normalized Data and Cleaning Data,
-                    to streamline the data preprocessing process, yielding a notable time optimization of 25%.
+                    Optimized the data preprocessing process by leveraging Azure Machine Learning modules,
+                    including Normalized Data & Clean Missing Data.
                     </li>
                     <li>
-                        Coordinated remote team efforts, achieving a project success rate of 100%
-                        and earning an Outstanding rating from our lead technical mentor.
+                    Achieved an Outstanding work-term rating from our lead technical mentor
+                    through effectively coordinating remote team efforts.
                     </li>
                     </ul>
                 </VerticalTimelineElement>

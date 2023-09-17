@@ -3,10 +3,16 @@ import { Office } from "./Devroom";
 import { motion } from "framer-motion-3d";
 import { useEffect } from "react";
 import { useMotionValue, animate } from "framer-motion";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 
 export const Experience = (props) => {
   const { section, menuOpened } = props;
+  const { viewport } = useThree(); // Get viewport from useThree()
+
+  const isMobile = window.innerWidth < 770;  // Start updating responsiveness
+  const responsiveRatio = viewport.width / 14; // Use viewport.width
+  // Set the smallest and largest the room could scale to
+  const devroomScaleRatio = Math.max(0.35, Math.min(0.9 * responsiveRatio, 0.9));
 
   const cameraPositionX = useMotionValue();
   const cameraLookAtX = useMotionValue();
@@ -15,22 +21,18 @@ export const Experience = (props) => {
   useEffect(() => {
     // Function from framer-motion
     animate(cameraPositionX, menuOpened ? 5 : 45, {
-      transition: {
-        type: "string",
-        mass: 5,
-        stiffness: 500,
-        damping: 50,
-        restDelta: 0.0001,
-      },
+      type: "string",
+      mass: 5,
+      stiffness: 500,
+      damping: 55,
+      restDelta: 0.0001,
     });
     animate(cameraLookAtX, menuOpened ? 5 : 0, {
-      transition: {
-        type: "string",
-        mass: 5,
-        stiffness: 500,
-        damping: 50,
-        restDelta: 0.0001,
-      },
+      type: "string",
+      mass: 5,
+      stiffness: 500,
+      damping: 55,
+      restDelta: 0.0001,
     });
   }, [menuOpened]);
 
@@ -39,7 +41,14 @@ export const Experience = (props) => {
     state.camera.lookAt(cameraLookAtX.get(), 0, 0);
   });
 
-  const scale = menuOpened ? [0.65, 0.65, 0.65] : [0.95, 0.95, 0.95]; // Adjust the scale based on menuOpened
+  const scale = menuOpened
+    ? [devroomScaleRatio * 0.7, devroomScaleRatio * 0.7, devroomScaleRatio * 0.7]
+    : [devroomScaleRatio, devroomScaleRatio, devroomScaleRatio]; // Adjust the scale based on menuOpened
+
+  // Adjust the position based on menuOpened and isMobile
+  const position = menuOpened
+    ? [isMobile ? 2.5 : 7 * devroomScaleRatio, isMobile ? -viewport.height / 6 : 0, 4]
+    : [isMobile ? 2.5 : 10 * devroomScaleRatio, isMobile ? -viewport.height / 6 : 0, isMobile ? 2 : 3];
 
   return (
     <>
@@ -53,10 +62,10 @@ export const Experience = (props) => {
         enablePan={false}
       />
       <motion.group
-        position={menuOpened ? [5.5, 0, 3] : [7.5, 0, 2]}
-        scale={scale} 
+        position={position}
+        scale={scale}
         animate={{
-          y: section === 0 ? -0.5 : -1,
+          y: isMobile ? -viewport.height / 8 : 0,
         }}
       >
         <ambientLight intensity={1} />
