@@ -20,6 +20,7 @@
     "react-dom": "^18.2.0",
     "react-vertical-timeline-component": "^3.6.0",
     "read-pkg-up": "^10.1.0",
+    "scroll": "^3.0.1",
     "three": "0.153.0"
   },
   "devDependencies": {

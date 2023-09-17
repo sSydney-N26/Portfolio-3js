@@ -6,7 +6,7 @@ import { useMotionValue, animate } from "framer-motion";
 import { useFrame, useThree } from "@react-three/fiber";
 
 export const Experience = (props) => {
-  const { section, menuOpened } = props;
+  const { menuOpened } = props;
   const { viewport } = useThree(); // Get viewport from useThree()
 
   const isMobile = window.innerWidth < 770;  // Start updating responsiveness

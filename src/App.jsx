@@ -26,7 +26,7 @@ function App() {
           restDelta: 0.0001,
         }}
       >
-        <Canvas shadows camera={{ position: [40, 15, 35], fov: 10 }}> {/* Adjust the X position to move the camera right */}
+        <Canvas shadows camera={{ position: [40, 15, 35], fov: 10 }}>
           <color attach="background" args={["#fff0f3"]} />
           <ScrollControls pages={8} damping={0.1}>
             <ScrollManager section={section} onSectionChange={setSection} />
