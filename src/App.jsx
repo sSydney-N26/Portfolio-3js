@@ -6,6 +6,7 @@ import { ScrollManager } from "./components/ScrollManager";
 import { Nav } from "./components/Navbar";
 import { useState, useEffect } from "react";
 import { MotionConfig } from "framer-motion";
+import { Leva } from "leva";
 
 function App() {
   const [section, setSection] = useState(0);
@@ -28,7 +29,7 @@ function App() {
       >
         <Canvas shadows camera={{ position: [40, 15, 35], fov: 10 }}>
           <color attach="background" args={["#fff0f3"]} />
-          <ScrollControls pages={8} damping={0.1}>
+          <ScrollControls pages={7} damping={0.1}>
             <ScrollManager section={section} onSectionChange={setSection} />
             <Scroll>
               <Experience section={section} menuOpened={menuOpened} />
@@ -40,6 +41,7 @@ function App() {
         </Canvas>
         <Nav onSectionChange={setSection} menuOpened={menuOpened} setMenuOpened={setMenuOpened} />
       </MotionConfig>
+      <Leva hidden />
     </>
   );
 }
