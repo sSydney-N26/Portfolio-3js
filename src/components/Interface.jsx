@@ -31,7 +31,8 @@ const Section = (props) => {
   );
 };
 
-const EntryPage = () => {
+const EntryPage = (props) => {
+  const { setSection } = props; 
   return (
     <Section mobileTop>
       <motion.h1 className="md:text-5xl text-4xl text-center ml-11 md:ml-9 text-gray-900 font-extrabold"
@@ -76,8 +77,10 @@ const EntryPage = () => {
         <br />
         user experiences at my workplace.
         </motion.p>
-        <motion.button className="text-white bg-pink-700 ml-8 
-         py-3 px-12 rounded-lg font-bold text-lg mt-2"
+        <motion.button 
+          onClick={() => setSection(6)}
+          className="text-white bg-pink-700 ml-8 
+          py-3 px-12 rounded-lg font-bold text-lg mt-2"
            initial={{
             opacity: 0,
             y: 50 
@@ -183,10 +186,11 @@ const Work = () => {
   )
 }
 
-export const Interface = () => {
+export const Interface = (props) => {
+  const { setSection } = props;
   return (
     <div className="flex flex-col items-center w-screen">
-      <EntryPage />
+      <EntryPage setSection={ setSection } />
       <Work />
       <SkillsSection />
       <ContactsSection />
