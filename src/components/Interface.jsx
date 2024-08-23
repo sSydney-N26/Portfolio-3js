@@ -53,7 +53,7 @@ const EntryPage = (props) => {
         <span className="lg:px-2 lg:py-2 md:text-4xl text-3xl font-extrabold text-pink-700 px-1 py-1
         bg-white italic inline-block rounded-lg shadow-lg">  Sydney ! </span>
         </motion.h1>
-        <motion.p className="lg:text-[14px] lg:my-5 lg:mx-5
+        <motion.p className="lg:text-[14px] lg:my-3 lg:mx-5
         md:my-5 md:mx-6 text-center text-gray-800 my-5 mx-10  
         md:text-[12px] sm:text-[10px] xs:text-[10px] text-[12px]"
            initial={{
@@ -87,7 +87,7 @@ const EntryPage = (props) => {
         </motion.p>
         <motion.button 
           onClick={() => setSection(6)}
-          className="lg:ml-26 lg:py-4 lg:px-16
+          className="lg:ml-26 lg:py-4 lg:px-16 lg:my-6
           text-white bg-pink-700 ml-20 
           py-3 px-12 rounded-lg font-bold text-lg mt-3"
            initial={{

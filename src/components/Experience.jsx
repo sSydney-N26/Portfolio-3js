@@ -12,7 +12,7 @@ export const Experience = (props) => {
   const isMobile = window.innerWidth < 770;  // Start updating responsiveness
   const responsiveRatio = viewport.width / 14; // Use viewport.width
   // Set the smallest and largest the room could scale to
-  const devroomScaleRatio = Math.max(0.35, Math.min(0.9 * responsiveRatio, 0.9));
+  const devroomScaleRatio = Math.max(0.35, Math.min(0.8 * responsiveRatio, 0.8));
 
   const cameraPositionX = useMotionValue();
   const cameraLookAtX = useMotionValue();
