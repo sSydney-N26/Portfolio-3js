@@ -44,8 +44,8 @@ const EntryPage = (props) => {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 1,
-                delay: 1,
+                duration: 0.5,
+                delay: 0.5,
             }
          }}>
         Hi, I am
@@ -54,7 +54,7 @@ const EntryPage = (props) => {
         bg-white italic inline-block rounded-lg shadow-lg">  Sydney ! </span>
         </motion.h1>
         <motion.p className="lg:text-[14px] lg:my-3 lg:mx-5
-        md:my-5 md:mx-6 text-center text-gray-800 my-5 mx-10  
+        md:my-4 md:mx-11 text-center text-gray-800 my-5 mx-10  
         md:text-[12px] sm:text-[10px] xs:text-[10px] text-[12px]"
            initial={{
             opacity: 0,  
@@ -64,24 +64,26 @@ const EntryPage = (props) => {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 1,
-                delay: 1.5,
+                duration: 0.75,
+                delay: 1,
             }
          }}>
          
         <br />
-        I am a 3rd year Computer Science, and Business   
+        I am a 3rd year Honours Computer Science,    
         <br />
-        Administration Double Degree student at UWaterloo    
+        and BusinessAdministration Double Degree     
         <br />
-        and Wilfrid Laurier University. I am drawn to 3D  
+        student at UWaterloo and Wilfrid Laurier  
         <br />
-        and AR development, & would love to explore & gain   
+        University. I am drawn to 3D and AR 
         <br />
-        experience in AI/ML in the near future. I have  
+        development, and would love to gain experience 
         <br />
-        experience working in Web Development & Cybersecurity,
+        in AI/ML in the near future. I have experience 
         <br />
+        working in Web Development & Cybersecurity, 
+        <br/>
         especially agent-based security development.
         
         </motion.p>
@@ -99,7 +101,7 @@ const EntryPage = (props) => {
                 y: 0,
                 transition: {
                     duration: 1,
-                    delay: 2,
+                    delay: 1.5,
                 }
             }}> Let's Chat!
         </motion.button>
@@ -112,10 +114,38 @@ const SkillsSection = () => {
     return (
       <Section>
         <div>
-          <p className="text-gray-700 text-lg mr-12"> What I Have Worked With </p>
-          <h2 className="text-gray-900 font-extrabold md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
+          <motion.p className="text-gray-700 text-lg mr-12"
+            initial={{
+              opacity: 0,  
+              y: 25,
+          }}
+          whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                  duration: 0.75,
+                  delay: 0.75,
+              }
+          }}>
+              What I Have Worked With
+          </motion.p>
+
+          <motion.h1 className="text-gray-900 font-extrabold md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]"
+          initial={{
+            opacity: 0,
+            y: 50
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.75,
+              delay: 1,
+            }
+          }}>
             Skills
-          </h2>
+          </motion.h1>
+
         </div>
         <div className="flex flex-row flex-wrap justify-center gap-10">
           {technologies.map((technology) => (
@@ -200,8 +230,8 @@ export const Interface = (props) => {
   return (
     <div className="flex flex-col items-center w-screen">
       <EntryPage setSection={ setSection } />
+      <SkillsSection/>
       <Work />
-      <SkillsSection />
       <ContactsSection />
     </div>
   );

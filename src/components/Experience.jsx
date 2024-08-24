@@ -4,6 +4,7 @@ import { motion } from "framer-motion-3d";
 import { useEffect } from "react";
 import { useMotionValue, animate } from "framer-motion";
 import { useFrame, useThree } from "@react-three/fiber";
+import { Avatar } from "./Avatar";
 
 export const Experience = (props) => {
   const { menuOpened } = props;
@@ -12,7 +13,7 @@ export const Experience = (props) => {
   const isMobile = window.innerWidth < 770;  // Start updating responsiveness
   const responsiveRatio = viewport.width / 14; // Use viewport.width
   // Set the smallest and largest the room could scale to
-  const devroomScaleRatio = Math.max(0.35, Math.min(0.8 * responsiveRatio, 0.8));
+  const devroomScaleRatio = Math.max(0.35, Math.min(0.85 * responsiveRatio, 0.85));
 
   const cameraPositionX = useMotionValue();
   const cameraLookAtX = useMotionValue();
@@ -42,12 +43,12 @@ export const Experience = (props) => {
   });
 
   const scale = menuOpened
-    ? [devroomScaleRatio * 0.7, devroomScaleRatio * 0.7, devroomScaleRatio * 0.7]
+    ? [devroomScaleRatio * 0.65, devroomScaleRatio * 0.65, devroomScaleRatio * 0.65]
     : [devroomScaleRatio, devroomScaleRatio, devroomScaleRatio]; // Adjust the scale based on menuOpened
 
   // Adjust the position based on menuOpened and isMobile
   const position = menuOpened
-    ? [isMobile ? 2.5 : 7 * devroomScaleRatio, isMobile ? -viewport.height / 6 : 0, 4]
+    ? [isMobile ? 2.5 : 7.5 * devroomScaleRatio, isMobile ? -viewport.height / 6 : 0, 4]
     : [isMobile ? 2.5 : 10 * devroomScaleRatio, isMobile ? -viewport.height / 6 : 0, isMobile ? 2 : 3];
 
 const orbitControls = isMobile ? null : (
@@ -73,7 +74,17 @@ const orbitControls = isMobile ? null : (
         }}
       >
         <ambientLight intensity={1} />
-        <Office />
+
+        <Office 
+          position={[0, -0.5, -1.2]}
+          rotation={[0, -Math.PI / 10, 0]}
+        />
+        <Avatar         
+        scale={[2.5, 2.5, 2.5]}  // Increase size by scaling up
+        position={[-0.6, 0.6, -2.7]}  
+        rotation={[0, -Math.PI / 1.2 , 0]}  // Rotate 45 degrees around the Y axis
+        />
+
       </motion.group>
     </>
   );

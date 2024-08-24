@@ -25,14 +25,14 @@ export const Nav = (props) => {
           />
         </button>
         <div
-          className={`z-10 fixed top-0 right-0 bottom-0 bg-pink-50 transition-all overflow-hidden flex flex-col
+          className={`z-10 fixed top-0 right-0 bottom-0 bg-white transition-all overflow-hidden flex flex-col
         ${menuOpened ? "w-full md:w-80" : "w-0"}`}
         >
           <div className="flex-1 flex items-start justify-center flex-col gap-6 p-8">
             <MenuTitles label="About" onClick={() => onSectionChange(0)} />
-            <MenuTitles label="Experience" onClick={() => onSectionChange(1)} />
-            <MenuTitles label="Skills" onClick={() => onSectionChange(4)} />
-            <MenuTitles label="Contact" onClick={() => onSectionChange(6)} />
+            <MenuTitles label="Skills" onClick={() => onSectionChange(1)} />
+            <MenuTitles label="Experience" onClick={() => onSectionChange(2)} />
+            <MenuTitles label="Contact" onClick={() => onSectionChange(4)} />
           </div>
         </div>
       </>

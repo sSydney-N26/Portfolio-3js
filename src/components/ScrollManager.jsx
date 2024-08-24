@@ -13,7 +13,7 @@ export const ScrollManager = (props) => {
 
     // Overall, we are styling it using CSS so that the data is 
     // absolutely positioned within its container
-    data.fill.classList.add("top-0");    // Calling the CSS class list "classList" and applying top-0 on the data.
+    data.fill.classList.add("top-0");   
     data.fill.classList.add("absolute");
 
     // useEffect takes a function and an array of dependencies [section]
