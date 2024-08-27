@@ -1,5 +1,4 @@
 import React from "react";
-//import { textVariant } from "../utils/motion.js";
 import { motion } from "framer-motion";
 import { technologies } from "../constants/work.js";
 import { BallCanvas } from "./canvas";
@@ -35,7 +34,9 @@ const EntryPage = (props) => {
   const { setSection } = props; 
   return (
     <Section mobileTop>
-      <motion.h1 className="lg:text-6xl md:text-5xl text-4xl text-center ml-11 md:ml-20 text-gray-900 font-extrabold"
+      <motion.h1 className="lg:text-6xl md:text-4xl text-4xl text-center ml-20 
+                            lg:mt-0 md:mt-0 mt-10 md:mx-20 text-gray-900 
+                            font-extrabold"
            initial={{
             opacity: 0,  
             y: 25 
@@ -45,17 +46,18 @@ const EntryPage = (props) => {
             y: 0,
             transition: {
                 duration: 0.5,
-                delay: 0.5,
+                delay: 1.5,
             }
          }}>
         Hi, I am
         <br />
         <span className="lg:px-2 lg:py-2 md:text-4xl text-3xl font-extrabold text-pink-700 px-1 py-1
-        bg-white italic inline-block rounded-lg shadow-lg">  Sydney ! </span>
+                        bg-white italic inline-block rounded-lg shadow-lg md:mx-3 md:mt-3"> Sydney ! </span>
         </motion.h1>
+
         <motion.p className="lg:text-[14px] lg:my-3 lg:mx-5
-        md:my-4 md:mx-11 text-center text-gray-800 my-5 mx-10  
-        md:text-[12px] sm:text-[10px] xs:text-[10px] text-[12px]"
+        md:my-3 md:mx-15 text-center text-gray-800 my-5 mx-10  
+        md:text-[12px] sm:text-[11px] xs:text-[11px] text-[11px]"
            initial={{
             opacity: 0,  
             y: 25,
@@ -64,44 +66,47 @@ const EntryPage = (props) => {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.75,
-                delay: 1,
+                duration: 0.5,
+                delay: 2.0,
             }
          }}>
          
         <br />
-        I am a 3rd year Honours Computer Science,    
+        I am a 3rd year Honours Computer Science, and   
         <br />
-        and BusinessAdministration Double Degree     
+        Business Administration Double Degree student   
         <br />
-        student at UWaterloo and Wilfrid Laurier  
+        at the University of Waterloo and Wilfrid Laurier  
         <br />
-        University. I am drawn to 3D and AR 
+        University. I am drawn to 3D and AR development,
         <br />
-        development, and would love to gain experience 
+        and would love to gain experience in AI/ML in the
         <br />
-        in AI/ML in the near future. I have experience 
+        near future. I have experience working in Web
         <br />
-        working in Web Development & Cybersecurity, 
+        Development and Cybersecurity, especially agent-
         <br/>
-        especially agent-based security development.
+        based security development.
+        <br />
+        
         
         </motion.p>
+
         <motion.button 
-          onClick={() => setSection(6)}
+          onClick={() => setSection(5)}
           className="lg:ml-26 lg:py-4 lg:px-16 lg:my-6
-          text-white bg-pink-700 ml-20 
-          py-3 px-12 rounded-lg font-bold text-lg mt-3"
+          text-white bg-pink-700 mx-20 md:my-3
+          py-3 px-8 rounded-lg font-bold text-lg md:mx-20 md:py-3 md:px-12"
            initial={{
             opacity: 0,
-            y: 50 
+            y: 25 
            }}
             whileInView={{
                 opacity: 1,
                 y: 0,
                 transition: {
-                    duration: 1,
-                    delay: 1.5,
+                    duration: 0.5,
+                    delay: 2.5,
                 }
             }}> Let's Chat!
         </motion.button>
@@ -114,7 +119,7 @@ const SkillsSection = () => {
     return (
       <Section>
         <div>
-          <motion.p className="text-gray-700 text-lg mr-12"
+          <motion.p className="text-gray-700 lg:text-lg md:text-base sm:text-sm mr-12"
             initial={{
               opacity: 0,  
               y: 25,
@@ -130,7 +135,7 @@ const SkillsSection = () => {
               What I Have Worked With
           </motion.p>
 
-          <motion.h1 className="text-gray-900 font-extrabold md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]"
+          <motion.h1 className="text-gray-900 font-extrabold lg:text-[55px] md:text-[40px] sm:text-[30px] xs:text-[30px] text-[30px]"
           initial={{
             opacity: 0,
             y: 50
@@ -147,12 +152,12 @@ const SkillsSection = () => {
           </motion.h1>
 
         </div>
-        <div className="flex flex-row flex-wrap justify-center gap-10">
+        <div className="flex flex-row flex-wrap justify-center gap-5">
           {technologies.map((technology) => (
-            <div className="w-28 mt-5" key={technology.name}>
+            <div className="w-28 mt-2" key={technology.name}>
               <div className="flex flex-col items-center">
                 <BallCanvas icon={technology.icon} />
-                <motion.div className="mt-2 text-lg font-bold text-gray-700 text-center"
+                <motion.div className="md:text-base font-bold text-gray-700 text-center"
                 initial={{
                     opacity: 1,
                 }}
@@ -173,49 +178,76 @@ const SkillsSection = () => {
   };
 
 
-const ContactsSection = () => {
-  return (
-    <Section>
-      <motion.div>
-        <h2 className="text-gray-900 font-extrabold md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
-            Contact Me
-        </h2>
-        <div className="mt-5 p-8 rounded-md bg-pink-100 w-80 max-w-full">
-            <form>
-                <label for="name" className="font-semibold text-gray-900 block mb-1">
-                    Name
-                </label>
-                <input type="text" name="name" id="name" 
-                // Ring-1 means applying border/ring around element with width of 1px
-                 className="block w-full rounded-md border-0 text-gray-900 show-sm ring-1 ring-inset
-                  ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset 
-                  focus:ring-indigo-600 p-3" /> 
-                  
-                 <label for="email" className="font-semibold text-gray-900 block mb-1 mt-10">
-                    Email
-                 </label>
-                 <input type="email" name="email" id="email" className="block w-full rounded-md border-0 
-                 text-gray-900 show-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 
-                 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3">
-                 </input>
-                 <label for="email" className="font-semibold text-gray-900 block mb-1 mt-8">
-                    Message
-                 </label>
-                 <textarea name="message" id="message" className="h-32 block w-full rounded-md
-                 border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 
-                 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3" />
-
-                 <button className="bg-pink-200 text-gray-900 py-5 px-8 rounded-lg
-                 font-bold text-lg mt-10">
-                    Submit
-                 </button>
-            </form>
-
+  const ContactsSection = () => {
+    return (
+      <section className="flex flex-col items-center justify-center lg:my-20 md:py-5">
+        {/* Section Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.75 }}
+          className="text-center mb-5"
+        >
+          <h2 className="text-gray-900 font-extrabold md:text-[40px] sm:text-[30px] xs:text-[30px] text-[30px]">
+            CONTACT ME
+          </h2>
+          <p className="text-gray-600 md:text-lg sm:text-md text-sm">
+            You might find these helpful!
+          </p>
+        </motion.div>
+  
+        {/* Contact Platforms */}
+        <div className="flex flex-col md:flex-row gap-6">
+          <ContactCard
+            icon="/src/assets/email.png"
+            label="E-mail"
+            url="mailto:snmnguye@uwaterloo.ca"
+            bgColor="bg-white"
+          />
+          <ContactCard
+            icon="/src/assets/linkedin.webp"
+            label="LinkedIn"
+            url="https://www.linkedin.com/in/sydney-nguyen2609/"
+            bgColor="linkedin"
+          />
+          <ContactCard
+            icon="/src/assets/github.png"
+            label="Github"
+            url="https://github.com/sSydney-N26"
+            bgColor="bg-purple-600"
+          />
+          <ContactCard
+            icon="/src/assets/url.png"
+            label="Resume"
+            url="https://github.com/sSydney-N26"
+            bgColor="bg-white"
+          />
         </div>
-      </motion.div>
-    </Section>
-  );
-};
+      </section>
+    );
+  };
+  
+  const ContactCard = ({ icon, label, url, bgColor }) => {
+    return (
+      <motion.a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center p-5 bg-gray-100 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <div className={`flex items-center justify-center w-8 h-8 rounded-full text-white ${bgColor} mr-4`}>
+          <img src={icon} alt={label} className="w-full h-full object-cover rounded-full" />
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold">{label}</h3>
+        </div>
+      </motion.a>
+    );
+  };
+
+
 
 const Work = () => {
   return (

@@ -45,11 +45,11 @@ export function Office(props) {
         <mesh name="WallShelf" geometry={nodes.WallShelf.geometry} material={textureMaterial} position={[0.41, 4.133, -3.778]} />
         <mesh name="Sphere" geometry={nodes.Sphere.geometry} material={textureMaterial} position={[0.953, 4.48, -3.609]} />
         <group name="Chair" position={[-1.175, 0.663, -1.153]} rotation={[0, 0.809, 0]} scale={0.954}>
-          <mesh name="Node-Mesh" geometry={nodes['Node-Mesh'].geometry} material={textureMaterial} />
+          <mesh name="Node-Mesh" geometry={nodes['Node-Mesh'].geometry} material={materials.Office_Cha} />
           <mesh name="Node-Mesh_1" geometry={nodes['Node-Mesh_1'].geometry} material={textureMaterial} />
         </group>
         <mesh name="Sphere001" geometry={nodes.Sphere001.geometry} material={textureMaterial} position={[0.37, 4.476, -3.47]} />
-        <mesh name="Mouse" geometry={nodes.Mouse.geometry} material={textureMaterial} position={[-1.107, 2.721, -2.733]} rotation={[Math.PI, -0.894, Math.PI]} />
+        <mesh name="Mouse" geometry={nodes.Mouse.geometry} material={textureMaterial} position={[-0.924, 2.728, -2.998]} rotation={[Math.PI, -0.894, Math.PI]} />
         <mesh name="BookShelf" geometry={nodes.BookShelf.geometry} material={textureMaterial} position={[-3.357, 1.155, 3.107]} />
         <group name="MidBookonDesk" position={[-2.965, 2.846, 0.656]} rotation={[Math.PI, -1.563, Math.PI]}>
           <mesh name="Plane013" geometry={nodes.Plane013.geometry} material={textureMaterial} />
@@ -119,4 +119,7 @@ export function Office(props) {
     )
 }
 
-useGLTF.preload('models/Office_Scene_Mac_Test.gltf')
+useGLTF.preload('models/Office_Scene_Mac_Test.gltf');
+useTexture.preload('textures/BakedTestCurr.jpg');
+useTexture.preload('textures/Mac.jpg');
+//useVideoTexture.preload('textures/vscode6.mp4');

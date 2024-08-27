@@ -91,3 +91,4 @@ export function Avatar(props) {
 }
 
 useGLTF.preload('models/66c811159634364b301841f1.glb')
+useFBX.preload('animations/TypingTest.fbx');

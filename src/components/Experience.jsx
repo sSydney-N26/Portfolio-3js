@@ -48,24 +48,26 @@ export const Experience = (props) => {
 
   // Adjust the position based on menuOpened and isMobile
   const position = menuOpened
-    ? [isMobile ? 2.5 : 7.5 * devroomScaleRatio, isMobile ? -viewport.height / 6 : 0, 4]
-    : [isMobile ? 2.5 : 10 * devroomScaleRatio, isMobile ? -viewport.height / 6 : 0, isMobile ? 2 : 3];
+    ? [isMobile ? 2.5 : 7.5 * devroomScaleRatio, isMobile ? -viewport.height / 6 : 0, isMobile? 2 : 4]
+    : [isMobile ? 2.0 : 10 * devroomScaleRatio, isMobile ? -viewport.height / 6 : 0, isMobile ? 2 : 3];
 
-const orbitControls = isMobile ? null : (
-      <OrbitControls
-        enableDamping
-        dampingFactor={0.25}
-        target={[1, 2.5, 4.5]}
-        initialPosition={[40, 20, 20]}
-        enableZoom={false}
-        enableRotate={false}
-        enablePan={false}
-      />
-    );
+  // const orbitControls = isMobile ? null : (
+  //     <OrbitControls
+  //       enableDamping
+  //       dampingFactor={0.25}
+  //       target={[1, 2.5, 4.5]}
+  //       initialPosition={[40, 20, 20]}
+  //       enableZoom={false}
+  //       enableRotate={false}
+  //       enablePan={false}
+  //     />
+  // );
+
+  const officePosition = isMobile ? [0, -5, -1.2] : [0, -0.5, -1.2];
+  const avatarPosition = isMobile ? [-0.6, -4, -2.7] : [-0.6, 0.6, -2.7];
     
   return (
     <>
-    { orbitControls }
       <motion.group
         position={position}
         scale={scale}
@@ -76,12 +78,12 @@ const orbitControls = isMobile ? null : (
         <ambientLight intensity={1} />
 
         <Office 
-          position={[0, -0.5, -1.2]}
+          position={officePosition}
           rotation={[0, -Math.PI / 10, 0]}
         />
         <Avatar         
         scale={[2.5, 2.5, 2.5]}  // Increase size by scaling up
-        position={[-0.6, 0.6, -2.7]}  
+        position={avatarPosition}  
         rotation={[0, -Math.PI / 1.2 , 0]}  // Rotate 45 degrees around the Y axis
         />
 

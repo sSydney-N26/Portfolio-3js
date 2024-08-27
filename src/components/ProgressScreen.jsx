@@ -12,7 +12,7 @@ export const ProgressScreen = (props) => {
         if (progress == 100) {
             setTimeout(() => {
                 setStarted(true);
-            }, 600);
+            }, 700);
         }
     }, [progress, total, loaded, item]);
 
@@ -28,7 +28,7 @@ export const ProgressScreen = (props) => {
         >
             <div className="lg:text-7xl md:text-5xl text-4xl font-bold text-pink-900 relative">
                 <div
-                    className="absolute left-0 top-0 overflow-hidden truncate text-clip transition-all duration-600"
+                    className="absolute left-0 top-0 overflow-hidden truncate text-clip transition-all duration-700"
                     style={{
                         width: `${progress}%`,
                     }}    
