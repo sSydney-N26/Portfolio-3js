@@ -1,15 +1,18 @@
 import { Canvas } from "@react-three/fiber";
 import { Scroll, ScrollControls } from "@react-three/drei";
+import { Suspense, useEffect, useState } from "react";
 import { Experience } from "./components/Experience";
 import { Interface } from "./components/Interface";
+import { ProgressScreen } from "./components/ProgressScreen";
 import { ScrollManager } from "./components/ScrollManager";
 import { Nav } from "./components/Navbar";
-import { useState, useEffect } from "react";
 import { MotionConfig } from "framer-motion";
 import { Leva } from "leva";
 
+
 function App() {
   const [section, setSection] = useState(0);
+  const [started, setStarted] = useState(false);
   const [menuOpened, setMenuOpened] = useState(false);
 
   useEffect(() => {
@@ -18,6 +21,7 @@ function App() {
 
   return (
     <>
+      <ProgressScreen started={started} setStarted={setStarted} />
       <MotionConfig
         transition={{
           type: "string",
@@ -29,17 +33,23 @@ function App() {
       >
         <Canvas shadows camera={{ position: [40, 15, 35], fov: 10 }}>
           <color attach="background" args={["#fff0f3"]} />
-          <ScrollControls pages={8} damping={0.1}>
+          <ScrollControls pages={5} damping={0.2}>
             <ScrollManager section={section} onSectionChange={setSection} />
             <Scroll>
-              <Experience section={section} menuOpened={menuOpened} />
+              <Suspense>
+                {started && <Experience section={section} menuOpened={menuOpened} />}
+              </Suspense>
             </Scroll>
             <Scroll html>
-              <Interface setSection={setSection} />
+              {started && <Interface setSection={setSection} />}
             </Scroll>
           </ScrollControls>
         </Canvas>
-        <Nav onSectionChange={setSection} menuOpened={menuOpened} setMenuOpened={setMenuOpened} />
+        <Nav 
+            onSectionChange={setSection} 
+            menuOpened={menuOpened} 
+            setMenuOpened={setMenuOpened} 
+        />
       </MotionConfig>
       <Leva hidden />
     </>

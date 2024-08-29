@@ -1,16 +1,18 @@
 import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { Decal, Float, OrbitControls, Preload, useTexture } from "@react-three/drei";
+import { Canvas, useThree } from "@react-three/fiber";
+import { Decal, Float, Preload, useTexture } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
+  const { viewport } = useThree(); // Get the viewport size
+  const scale = Math.max(2.0, Math.max(1.5, viewport.width / 12)); // Adjust scale based on viewport width
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.5}>
+      <mesh castShadow receiveShadow scale={scale}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color='#fff8eb'
