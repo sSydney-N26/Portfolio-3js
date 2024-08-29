@@ -1,3 +1,9 @@
+import github from "../assets/tech/github-icon.png"
+import resume from "../assets/tech/resume.png"
+import linkedin from "../assets/tech/linkedin.png"
+import email from "../assets/tech/email-icon.png"
+import myresume from "../assets/tech/Sydney_Nguyen_Resume.pdf"
+
 export const Nav = (props) => {
     const { onSectionChange, menuOpened, setMenuOpened } = props;
   
@@ -38,26 +44,26 @@ export const Nav = (props) => {
             <div className="flex items-center justify-center gap-4 p-4">
             <MenuIcons
               url="https://github.com/sSydney-N26"
-              icon="/public/icons/github-icon.png"
+              icon={github}
               label="GitHub"
             />
 
             <MenuIcons
               url="https://www.linkedin.com/in/sydney-nguyen2609/"
-              icon="/public/icons/linkedin.png"
+              icon={linkedin}
               label="LinkedIn"
             />
 
             <MenuIcons
               url="mailto:snmnguye@uwaterloo.ca"
-              icon="/public/icons/email-icon.png"
+              icon={email}
               label="Email"
             />
 
             <MenuIcons
               url="/src/assets/Sydney_Nguyen_Resume.pdf"
-              icon="/public/icons/resume.png"
-              label="Resume"
+              icon={resume}
+              label={myresume}
             />
 
           </div>

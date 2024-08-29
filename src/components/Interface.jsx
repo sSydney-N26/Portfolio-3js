@@ -2,9 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { technologies } from "../constants/work.js";
 import { BallCanvas } from "./canvas";
-//import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-//import 'react-vertical-timeline-component/style.min.css';
 import { JobTimeline } from "./WorkExperience.jsx";
+import github from "../assets/tech/github.png"
+import resume from "../assets/tech/url.png"
+import linkedin from "../assets/tech/linkedin.webp"
+import email from "../assets/tech/email.png"
+import myresume from "../assets/tech/Sydney_Nguyen_Resume.pdf"
+
 
 const Section = (props) => {
   const { children, mobileTop } = props;
@@ -199,27 +203,27 @@ const SkillsSection = () => {
         {/* Contact Platforms */}
         <div className="flex flex-col md:flex-row md:gap-6 gap-3">
           <ContactCard
-            icon="/public/icons/email.png"
+            icon={email}
             label="E-mail"
             url="mailto:snmnguye@uwaterloo.ca"
             bgColor="bg-white"
           />
           <ContactCard
-            icon="/public/icons/linkedin.webp"
+            icon={linkedin}
             label="LinkedIn"
             url="https://www.linkedin.com/in/sydney-nguyen2609/"
             bgColor="linkedin"
           />
           <ContactCard
-            icon="/public/icons/github.png"
+            icon={github}
             label="Github"
             url="https://github.com/sSydney-N26"
             bgColor="bg-purple-600"
           />
           <ContactCard
-            icon="/public/icons/url.png"
+            icon={resume}
             label="Resume"
-            url="/src/assets/Sydney_Nguyen_Resume.pdf"
+            url={myresume}
             bgColor="bg-white"
           />
         </div>
