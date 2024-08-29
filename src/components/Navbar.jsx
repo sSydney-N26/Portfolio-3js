@@ -5,7 +5,7 @@ export const Nav = (props) => {
       <>
         <button
           onClick={() => setMenuOpened(!menuOpened)}
-          className="z-30 fixed top-3 md:top-4 right-6 md:right-10 p-3 bg-pink-700 w-11 h-11 rounded-md"
+          className="z-30 fixed top-4 md:top-4 right-6 md:right-10 p-3 bg-pink-700 w-11 h-11 rounded-md"
         >
           <div
             className={`bg-white h-1 rounded-md w-full transition-all 
@@ -28,25 +28,68 @@ export const Nav = (props) => {
           className={`z-10 fixed top-0 right-0 bottom-0 bg-white transition-all overflow-hidden flex flex-col
         ${menuOpened ? "w-full md:w-80" : "w-0"}`}
         >
-          <div className="flex-1 flex items-start justify-center flex-col gap-6 p-8">
-            <MenuTitles label="About" onClick={() => onSectionChange(0)} />
-            <MenuTitles label="Skills" onClick={() => onSectionChange(1)} />
-            <MenuTitles label="Experience" onClick={() => onSectionChange(2)} />
-            <MenuTitles label="Contact" onClick={() => onSectionChange(4)} />
+            <div className="flex-1 flex items-start justify-center flex-col gap-6 p-8">
+              <MenuTitles label="About" onClick={() => onSectionChange(0)} />
+              <MenuTitles label="Skills" onClick={() => onSectionChange(1)} />
+              <MenuTitles label="Experience" onClick={() => onSectionChange(2)} />
+              <MenuTitles label="Contact" onClick={() => onSectionChange(4)} />
+            </div>
+
+            <div className="flex items-center justify-center gap-4 p-4">
+            <MenuIcons
+              url="https://github.com/sSydney-N26"
+              icon="/src/assets/github-icon.png"
+              label="GitHub"
+            />
+
+            <MenuIcons
+              url="https://www.linkedin.com/in/sydney-nguyen2609/"
+              icon="/src/assets/linkedin.png"
+              label="LinkedIn"
+            />
+
+            <MenuIcons
+              url="mailto:snmnguye@uwaterloo.ca"
+              icon="/src/assets/email-icon.png"
+              label="Email"
+            />
+
+            <MenuIcons
+              url="/src/assets/Sydney_Nguyen_Resume.pdf"
+              icon="/src/assets/resume.png"
+              label="Resume"
+            />
+
           </div>
         </div>
       </>
     );
   };
   
-  const MenuTitles = (props) => {
-    const { label, onClick } = props;
-    return (
-      <button
-        onClick={onClick}
-        className="text-2xl font-bold cursor-pointer hover:text-pink-600 transition-colors"
-      >
-        {label}
-      </button>
-    );
-  };
+const MenuTitles = (props) => {
+  const { label, onClick } = props;
+  return (
+    <button
+      onClick={onClick}
+      className="text-2xl font-bold cursor-pointer hover:text-pink-600 transition-colors"
+    >
+      {label}
+    </button>
+  );
+};
+
+const MenuIcons = (props) => {
+  const { url, icon, label } = props;
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-pink-200 transition duration-300"
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <img src={icon} alt={label} className="w-6 h-6" />
+    </a>
+  );
+};

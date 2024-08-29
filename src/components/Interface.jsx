@@ -34,7 +34,7 @@ const EntryPage = (props) => {
   const { setSection } = props; 
   return (
     <Section mobileTop>
-      <motion.h1 className="lg:text-6xl md:text-4xl text-4xl text-center ml-20 
+      <motion.h1 className="lg:text-6xl md:text-4xl text-4xl text-center ml-20
                             lg:mt-0 md:mt-0 mt-10 md:mx-20 text-gray-900 
                             font-extrabold"
            initial={{
@@ -46,7 +46,7 @@ const EntryPage = (props) => {
             y: 0,
             transition: {
                 duration: 0.5,
-                delay: 1.5,
+                delay: 0.5,
             }
          }}>
         Hi, I am
@@ -55,7 +55,7 @@ const EntryPage = (props) => {
                         bg-white italic inline-block rounded-lg shadow-lg md:mx-3 md:mt-3"> Sydney ! </span>
         </motion.h1>
 
-        <motion.p className="lg:text-[14px] lg:my-3 lg:mx-5
+        <motion.p className="lg:text-[14px] lg:my-3 lg:mx-11
         md:my-3 md:mx-15 text-center text-gray-800 my-5 mx-10  
         md:text-[12px] sm:text-[11px] xs:text-[11px] text-[11px]"
            initial={{
@@ -67,7 +67,7 @@ const EntryPage = (props) => {
             y: 0,
             transition: {
                 duration: 0.5,
-                delay: 2.0,
+                delay: 1.0,
             }
          }}>
          
@@ -106,7 +106,7 @@ const EntryPage = (props) => {
                 y: 0,
                 transition: {
                     duration: 0.5,
-                    delay: 2.5,
+                    delay: 1.5,
                 }
             }}> Let's Chat!
         </motion.button>
@@ -188,7 +188,7 @@ const SkillsSection = () => {
           transition={{ duration: 0.75 }}
           className="text-center mb-5"
         >
-          <h2 className="text-gray-900 font-extrabold md:text-[40px] sm:text-[30px] xs:text-[30px] text-[30px]">
+          <h2 className="text-gray-900 font-extrabold md:text-[40px] sm:text-[25px] xs:text-[25px] text-[30px]">
             CONTACT ME
           </h2>
           <p className="text-gray-600 md:text-lg sm:text-md text-sm">
@@ -197,7 +197,7 @@ const SkillsSection = () => {
         </motion.div>
   
         {/* Contact Platforms */}
-        <div className="flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col md:flex-row md:gap-6 gap-3">
           <ContactCard
             icon="/src/assets/email.png"
             label="E-mail"
@@ -219,7 +219,7 @@ const SkillsSection = () => {
           <ContactCard
             icon="/src/assets/url.png"
             label="Resume"
-            url="https://github.com/sSydney-N26"
+            url="/src/assets/Sydney_Nguyen_Resume.pdf"
             bgColor="bg-white"
           />
         </div>

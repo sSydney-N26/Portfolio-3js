@@ -39,6 +39,56 @@ export const JobTimeline = () => {
         </motion.h1>
          <div className="mx-auto py-1">
             <VerticalTimeline layout="2-columns" lineColor="rgb(157 23 77)">
+            <VerticalTimelineElement
+                    className="vertical-timeline-element--work"
+                    lineColor="rgb(157 23 77)"
+                    contentStyle={{ 
+                        background: "rgb(255, 218, 233)", 
+                        color: "rgb(68 64 60)",
+                        fontSize: "12px"
+                    }}
+                    contentArrowStyle={{ 
+                        borderRight: "12px solid rgb(255, 218, 233)" 
+                    }}
+                    iconStyle={{ 
+                        background: "rgb(255, 255, 255)", 
+                        color: "text-white" 
+                    }}
+                    icon={
+                        <img 
+                          src="/src/assets/tech/trend.png" 
+                          alt="icon" 
+                          className="w-full h-full object-cover rounded-full"
+                        />
+                    }
+                >
+                <div className="flex flex-row justify-between">               
+                    <h3 className="font-bold mb-1 text-lg"> 
+                        Software Developer
+                    </h3>
+                    <h4 className="text-right font-normal italic"> January 2024 - May 2024 </h4>
+                </div>
+                <h3 className="mb-2 italic"> 
+                    Trend Micro
+                </h3>
+                <div className="text-gray-800 md:text-[12px]">
+                    <ul className="list-disc pl-5"> 
+                        <li className="mb-2">
+                        Developed a caching mechanism for the Application Control product to enforce security rules on specified users using C++.
+                        </li>
+                        <li className="mb-2">
+                        Facilitated cross-team collaboration to detect & generate new security events on Workload Security’s GUI using Java.
+                        </li>
+                        <li>
+                        Enhanced builds’ quality by automating Jenkins regression tests for all new builds & integrated results as a GitHub status check.
+                        </li>
+                        <li>
+                        Enabled developers to automate builds’ performance results by maintaining Python test scripts & deploying AWS resources.
+                        </li>
+                    </ul>
+                </div>
+                </VerticalTimelineElement>
+                
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     lineColor="rgb(157 23 77)"
@@ -51,13 +101,19 @@ export const JobTimeline = () => {
                         borderRight: "12px solid rgb(255, 218, 233)" 
                     }}
                     iconStyle={{ 
-                        background: "rgb(157 23 77)", 
+                        background: "rgb(255 255 255)", 
                         color: "text-white", 
                         alignItems: "center",
                         justifyContent: "center",
 
                     }}
-                    icon={<i className="fas fa-code" />}
+                    icon={
+                        <img 
+                          src="/src/assets/vision.png" 
+                          alt="icon" 
+                          className="w-full h-full object-cover rounded-full"
+                        />
+                    }
                 >
                 <div className="flex flex-row justify-between">               
                     <h3 className="font-bold mb-1 text-lg"> 
@@ -69,8 +125,7 @@ export const JobTimeline = () => {
                 <div className="text-gray-800 md:text-[12px]">
                     <ul className="list-disc pl-5"> 
                         <li className="mb-2">
-                        Enhanced policy disclosures through website changes for 
-                        Vision Capital, an investment fund managing $159+ million.
+                        Enhanced policy transparency by implementing cookie policies for Vision Capital, an investment fund managing $159+ million.
                         </li>
                         <li className="mb-2">
                         Returned proprietary code control to Vision Capital by migrating
@@ -78,8 +133,7 @@ export const JobTimeline = () => {
                         appropriate Node.js version for future local development.
                         </li>
                         <li className="mb-2">
-                        Reduced invalid private funds access by creating Vue.js
-                        pages that certifies investor accreditation.
+                        Reduced invalid investor access to private funds by 80% by developing Vue.js certification pages for accredited investors and qualified purchasers.
                         </li>
                         <li>
                         Improved marketing team efficiency by integrating Prismic API 
@@ -102,12 +156,18 @@ export const JobTimeline = () => {
                         borderRight: "12px solid rgb(255, 218, 233)" 
                     }}
                     iconStyle={{ 
-                        background: "rgb(157 23 77)", 
+                        background: "rgb(255 255 255)", 
                         color: "text-white", 
                         width: " 40px",
                         height: "40px"
                     }}
-                    icon={<i className="fas fa-code" />}
+                    icon={
+                        <img 
+                          src="/src/assets/waterloo.png" 
+                          alt="icon" 
+                          className="w-full h-full object-cover rounded-full"
+                        />
+                    }
                 >
                 <div className="flex flex-row justify-between">               
                     <h3 className="font-bold mb-1 text-lg"> 
@@ -136,50 +196,7 @@ export const JobTimeline = () => {
                     </ul>
                 </div>
                 </VerticalTimelineElement>
-                <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    lineColor="rgb(157 23 77)"
-                    contentStyle={{ 
-                        background: "rgb(255, 218, 233)", 
-                        color: "rgb(68 64 60)",
-                        fontSize: "12px"
-                    }}
-                    contentArrowStyle={{ 
-                        borderRight: "12px solid rgb(255, 218, 233)" 
-                    }}
-                    iconStyle={{ 
-                        background: "rgb(157 23 77)", 
-                        color: "text-white" 
-                    }}
-                    icon={<i className="fas fa-code" />}
-                >
-                <div className="flex flex-row justify-between">               
-                    <h3 className="font-bold mb-1 text-lg"> 
-                        Lead Teaching Assistant
-                    </h3>
-                    <h4 className="text-right font-normal italic"> February 2021 - July 2022 </h4>
-                </div>
-                <h3 className="mb-2 italic"> 
-                    Mathstronauts
-                </h3>
-                <div className="text-gray-800 md:text-[12px]">
-                    <ul className="list-disc pl-5"> 
-                        <li className="mb-2">
-                        Mentored and coached 50+ middle-school students in multiple virtual
-                        programs on programming, game development, 3D modelling, and graphic design,
-                        resulting in 100% certification achieved.
-                        </li>
-                        <li className="mb-2">
-                        Guided students in creating high-quality projects in Python, including a Weather App,
-                        Alien vs Society Game, and Satellite Shooting Game.
-                        </li>
-                        <li>
-                        Effectively managed a team of 15 Teaching Assistants on a weekly basis, ensuring
-                        seamless lecture delivery and prompt resolution of student concerns.
-                        </li>
-                    </ul>
-                </div>
-                </VerticalTimelineElement>
+
             </VerticalTimeline >
         </div>
         </>

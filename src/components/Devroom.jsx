@@ -93,10 +93,10 @@ export function Office(props) {
           <mesh name="mesh31856083001_2" geometry={nodes.mesh31856083001_2.geometry} material={textureMaterial} />
         </group>
         <group name="BigTree" position={[2.914, 1.885, -3.339]}>
-          <mesh name="mesh24448074" geometry={nodes.mesh24448074.geometry} material={textureMaterial} />
-          <mesh name="mesh24448074_1" geometry={nodes.mesh24448074_1.geometry} material={textureMaterial} />
+          <mesh name="mesh24448074" geometry={nodes.mesh24448074.geometry} material={materials.TreeLeaves} />
+          <mesh name="mesh24448074_1" geometry={nodes.mesh24448074_1.geometry} material={materials.TreePot} />
           <mesh name="mesh24448074_2" geometry={nodes.mesh24448074_2.geometry} material={textureMaterial} />
-          <mesh name="mesh24448074_3" geometry={nodes.mesh24448074_3.geometry} material={textureMaterial} />
+          <mesh name="mesh24448074_3" geometry={nodes.mesh24448074_3.geometry} material={materials.TreeLeaves} />
         </group>
         <mesh name="Carpet" geometry={nodes.Carpet.geometry} material={materials.Carpet} position={[1.133, 0.824, 1.077]} rotation={[0, 0.909, 0]} />
         <group name="iMac" position={[-2.903, 2.78, -2.934]} rotation={[0, -0.697, 0]} scale={3.93}>
