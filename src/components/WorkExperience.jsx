@@ -2,6 +2,9 @@ import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { motion } from "framer-motion"
+import trend from "../assets/tech/trend.png"
+import waterloo from "../assets/tech/waterloo.png"
+import vision from "../assets/tech/vision.png"
 
 export const JobTimeline = () => {
     return (
@@ -56,7 +59,7 @@ export const JobTimeline = () => {
                     }}
                     icon={
                         <img 
-                          src="/src/assets/tech/trend.png" 
+                          src={trend}
                           alt="icon" 
                           className="w-full h-full object-cover rounded-full"
                         />
@@ -109,7 +112,7 @@ export const JobTimeline = () => {
                     }}
                     icon={
                         <img 
-                          src="/src/assets/vision.png" 
+                          src={vision} 
                           alt="icon" 
                           className="w-full h-full object-cover rounded-full"
                         />
@@ -163,7 +166,7 @@ export const JobTimeline = () => {
                     }}
                     icon={
                         <img 
-                          src="/src/assets/waterloo.png" 
+                          src={waterloo} 
                           alt="icon" 
                           className="w-full h-full object-cover rounded-full"
                         />
