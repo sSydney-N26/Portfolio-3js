@@ -199,25 +199,25 @@ const SkillsSection = () => {
         {/* Contact Platforms */}
         <div className="flex flex-col md:flex-row md:gap-6 gap-3">
           <ContactCard
-            icon="/src/assets/email.png"
+            icon="/public/icons/email.png"
             label="E-mail"
             url="mailto:snmnguye@uwaterloo.ca"
             bgColor="bg-white"
           />
           <ContactCard
-            icon="/src/assets/linkedin.webp"
+            icon="/public/icons/linkedin.webp"
             label="LinkedIn"
             url="https://www.linkedin.com/in/sydney-nguyen2609/"
             bgColor="linkedin"
           />
           <ContactCard
-            icon="/src/assets/github.png"
+            icon="/public/icons/github.png"
             label="Github"
             url="https://github.com/sSydney-N26"
             bgColor="bg-purple-600"
           />
           <ContactCard
-            icon="/src/assets/url.png"
+            icon="/public/icons/url.png"
             label="Resume"
             url="/src/assets/Sydney_Nguyen_Resume.pdf"
             bgColor="bg-white"

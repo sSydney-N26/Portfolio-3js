@@ -38,25 +38,25 @@ export const Nav = (props) => {
             <div className="flex items-center justify-center gap-4 p-4">
             <MenuIcons
               url="https://github.com/sSydney-N26"
-              icon="/src/assets/github-icon.png"
+              icon="/public/icons/github-icon.png"
               label="GitHub"
             />
 
             <MenuIcons
               url="https://www.linkedin.com/in/sydney-nguyen2609/"
-              icon="/src/assets/linkedin.png"
+              icon="/public/icons/linkedin.png"
               label="LinkedIn"
             />
 
             <MenuIcons
               url="mailto:snmnguye@uwaterloo.ca"
-              icon="/src/assets/email-icon.png"
+              icon="/public/icons/email-icon.png"
               label="Email"
             />
 
             <MenuIcons
               url="/src/assets/Sydney_Nguyen_Resume.pdf"
-              icon="/src/assets/resume.png"
+              icon="/public/icons/resume.png"
               label="Resume"
             />
 
