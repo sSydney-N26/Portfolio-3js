@@ -61,9 +61,9 @@ export const Nav = (props) => {
             />
 
             <MenuIcons
-              url="/src/assets/Sydney_Nguyen_Resume.pdf"
+              url={myresume}
               icon={resume}
-              label={myresume}
+              label="Resume"
             />
 
           </div>
