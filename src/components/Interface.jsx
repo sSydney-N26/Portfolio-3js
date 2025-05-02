@@ -76,27 +76,22 @@ const EntryPage = (props) => {
          }}>
          
         <br />
-        I’m a third‑year Honours Computer Science
-        <br /> 
-        andv Business Administration double‑degree 
+        I am a 3rd year Honours Computer Science, and   
         <br />
-        student at the University of Waterloo and 
+        Business Administration Double Degree student   
         <br />
-        Wilfrid Laurier. A 3D/AR enthusiast, I’ve built 
+        at the University of Waterloo and Wilfrid Laurier  
         <br />
-        web apps and agent‑based cybersecurity tools
+        University. I am drawn to 3D and AR development,
         <br />
-        and most recently spent four months at Shopify
+        and would love to gain experience in AI/ML in the
         <br />
-        across two teams, building large‑scale device
+        near future. I have experience working in Web
         <br />
-        security workflows and dived into mobile
+        Development and Cybersecurity, especially agent-
+        <br/>
+        based security development.
         <br />
-        development as well. Now I’m eager to deepen
-        <br />
-        my AI/ML knowledge and tackle the next
-        <br />
-        frontier of immersive experiences.
         
         
         </motion.p>
@@ -105,7 +100,7 @@ const EntryPage = (props) => {
           onClick={() => setSection(5)}
           className="lg:ml-26 lg:py-4 lg:px-16 lg:my-6
           text-white bg-pink-700 mx-20 md:my-3
-          py-3 px-8 rounded-lg font-bold text-lg md:mx-30 md:py-3 md:px-12"
+          py-3 px-8 rounded-lg font-bold text-lg md:mx-20 md:py-3 md:px-12"
            initial={{
             opacity: 0,
             y: 25 
@@ -138,7 +133,7 @@ const SkillsSection = () => {
               y: 0,
               transition: {
                   duration: 0.75,
-                  delay: 0.5,
+                  delay: 0.75,
               }
           }}>
               What I Have Worked With
@@ -153,8 +148,8 @@ const SkillsSection = () => {
             opacity: 1,
             y: 0,
             transition: {
-              duration: 1,
-              delay: 0.75,
+              duration: 0.75,
+              delay: 1,
             }
           }}>
             Skills

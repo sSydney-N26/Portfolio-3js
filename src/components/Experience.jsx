@@ -1,3 +1,4 @@
+import { OrbitControls } from "@react-three/drei";
 import { Office } from "./Devroom";
 import { motion } from "framer-motion-3d";
 import { useEffect } from "react";
