@@ -1,37 +1,21 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
   javascript,
-  typescript,
   html,
-  css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
-  mongodb,
   git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
 } from "../assets";
 
 import c from "/src/assets/tech/c.png"
 import cplus from "/src/assets/tech/cplus.png"
 import python from "/src/assets/tech/python.png"
-import sql from "/src/assets/tech/sql.png";
+import sql from "/src/assets/tech/sql.png"
 import azure from "/src/assets/tech/azure.png"
 import aws from "/src/assets/tech/aws.png"
-import java from "/src/assets/tech/java.png"
+import rails from "/src/assets/tech/rails.png"
+import gcp from "/src/assets/tech/gcp.png"
 
 const technologies = [
   {
@@ -43,12 +27,16 @@ const technologies = [
     icon: c,
   },
   {
-    name: "Java",
-    icon: java,
-  },
-  {
     name: "Python",
     icon: python,
+  },
+  {
+    name: "Ruby on Rails",
+    icon: rails, 
+  },
+  {
+    name: "GCP",
+    icon: gcp,
   },
   {
     name: "AWS",
