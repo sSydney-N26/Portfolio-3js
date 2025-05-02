@@ -78,15 +78,15 @@ const EntryPage = (props) => {
         <br />
         I’m a third‑year Honours Computer Science
         <br /> 
-        andv Business Administration double‑degree 
+        and Business Administration double‑degree 
         <br />
         student at the University of Waterloo and 
         <br />
-        Wilfrid Laurier. A 3D/AR enthusiast, I’ve built 
+        Wilfrid Laurier University. As an 3D/AR enthusiast,
         <br />
-        web apps and agent‑based cybersecurity tools
+        I’ve built web apps and agent‑based cybersecurity
         <br />
-        and most recently spent four months at Shopify
+        tools and most recently spent four months at Shopify
         <br />
         across two teams, building large‑scale device
         <br />
@@ -97,7 +97,6 @@ const EntryPage = (props) => {
         my AI/ML knowledge and tackle the next
         <br />
         frontier of immersive experiences.
-        
         
         </motion.p>
 
