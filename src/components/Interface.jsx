@@ -82,21 +82,21 @@ const EntryPage = (props) => {
         <br />
         student at the University of Waterloo and 
         <br />
-        Wilfrid Laurier University. As an 3D/AR enthusiast,
+        Wilfrid Laurier University. I’ve built web
         <br />
-        I’ve built web apps and agent‑based cybersecurity
+        apps and agent‑based cybersecurity tools
         <br />
-        tools and most recently spent four months at Shopify
+        Most recently, I spent four months at 
         <br />
-        across two teams, building large‑scale device
+        Shopify where I built large‑scale device
         <br />
         security workflows and dived into mobile
         <br />
-        development as well. Now I’m eager to deepen
+        development as well. I’m looking to deepen
         <br />
         my AI/ML knowledge and tackle the next
         <br />
-        frontier of immersive experiences.
+        frontier of immersive experiences!
         
         </motion.p>
 
