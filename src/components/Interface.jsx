@@ -82,11 +82,11 @@ const EntryPage = (props) => {
         <br />
         student at the University of Waterloo and 
         <br />
-        Wilfrid Laurier University. I’ve built web
+        Wilfrid Laurier University. I have experience
         <br />
-        apps and agent‑based cybersecurity tools
+        building web apps and agent‑based cybersecurity
         <br />
-        Most recently, I spent four months at 
+        tools. Most recently, I spent four months at 
         <br />
         Shopify where I built large‑scale device
         <br />
