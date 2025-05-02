@@ -84,19 +84,19 @@ const EntryPage = (props) => {
         <br />
         Wilfrid Laurier University. I have experience
         <br />
-        building web apps and agent‑based cybersecurity
+        building web apps and agent‑based 
         <br />
-        tools. Most recently, I spent four months at 
+        cybersecurity tools. Most recently, I spent four  
         <br />
-        Shopify where I built large‑scale device
+        months at Shopify where I built large‑scale
         <br />
-        security workflows and dived into mobile
+        device security workflows and dived into mobile
         <br />
-        development as well. I’m looking to deepen
+        development as well. I’m looking to deepen my
         <br />
-        my AI/ML knowledge and tackle the next
+        AI/ML knowledge and tackle the next frontier
         <br />
-        frontier of immersive experiences!
+        of immersive experiences!
         
         </motion.p>
 
