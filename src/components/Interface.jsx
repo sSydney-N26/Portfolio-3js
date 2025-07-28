@@ -78,8 +78,8 @@ const EntryPage = (props) => {
           ].map((line, idx) => (
             <div
               key={idx}
-              className="bg-white py-1 rounded-xl shadow-sm text-center mb-3 text-[12px] sm:text-[14px] md:text-[15px]
-              lg:text-[16px]"
+              className="bg-white py-1 rounded-xl shadow-sm text-center mb-2 text-[12px] sm:text-[14px] md:text-[15px]
+              lg:text-[15px]"
               style={{
                 width: "100%",
                 maxWidth: "400px" // matches typical h1/button text width
