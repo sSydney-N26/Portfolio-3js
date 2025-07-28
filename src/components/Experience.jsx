@@ -58,7 +58,7 @@ useFrame((state) => {
           y: isMobile ? -viewport.height / 8 : 0,
         }}
       >
-        <ambientLight intensity={3} />
+        <ambientLight intensity={2.0} />
 
         <Office 
           position={officePosition}
