@@ -1,4 +1,3 @@
-import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { motion } from "framer-motion"
@@ -42,7 +41,7 @@ export const JobTimeline = () => {
           Work Experience
         </motion.h1>
          <div className="mx-auto py-1">
-            <VerticalTimeline layout="2-columns" lineColor="rgb(157 23 77)">
+            <VerticalTimeline layout="1-columns" lineColor="rgb(157 23 77)">
 
             <VerticalTimelineElement
                     className="vertical-timeline-element--work"

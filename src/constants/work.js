@@ -1,17 +1,14 @@
-import {
-  javascript,
-  html,
-  reactjs,
-  tailwind,
-  nodejs,
-  git,
-  threejs,
-} from "../assets";
-
+import threejs from "/src/assets/tech/threejs.svg"
+import git from "/src/assets/tech/git.png"
+import nodejs from "/src/assets/tech/nodejs.png"
+import tailwind from "/src/assets/tech/tailwind.png"
+import reactjs from "/src/assets/tech/reactjs.png"
+import html from "/src/assets/tech/html.png"
+import javascript from "/src/assets/tech/javascript.png"
 import c from "/src/assets/tech/c.png"
 import cplus from "/src/assets/tech/cplus.png"
 import python from "/src/assets/tech/python.png"
-import sql from "/src/assets/tech/sql.png"
+import mysql from "/src/assets/tech/mysql.png"
 import azure from "/src/assets/tech/azure.png"
 import aws from "/src/assets/tech/aws.png"
 import rails from "/src/assets/tech/rails.png"
@@ -33,6 +30,10 @@ const technologies = [
   {
     name: "Ruby on Rails",
     icon: rails, 
+  },
+  {
+    name: "MySQL",
+    icon: mysql,
   },
   {
     name: "GCP",
@@ -74,10 +75,6 @@ const technologies = [
   {
     name: "Git",
     icon: git,
-  },
-  {
-    name: "SQL",
-    icon: sql,
   },
 ];
 

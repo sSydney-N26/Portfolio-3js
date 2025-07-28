@@ -12,34 +12,30 @@ export const Experience = (props) => {
   const isMobile = window.innerWidth < 770;  // Start updating responsiveness
   const responsiveRatio = viewport.width / 14; // Use viewport.width
   // Set the smallest and largest the room could scale to
-  const devroomScaleRatio = Math.max(0.35, Math.min(0.85 * responsiveRatio, 0.85));
+  const devroomScaleRatio = Math.max(0.3, Math.min(0.85 * responsiveRatio, 0.85));
 
-  const cameraPositionX = useMotionValue();
-  const cameraLookAtX = useMotionValue();
+const cameraPositionX = useMotionValue(45); // initial X position
+const cameraLookAtX = useMotionValue(0);    // initial lookAt target
 
-  // When menuOpened changes, run this:
-  useEffect(() => {
-    // Function from framer-motion
-    animate(cameraPositionX, menuOpened ? 5 : 45, {
-      type: "string",
-      mass: 5,
-      stiffness: 500,
-      damping: 55,
-      restDelta: 0.0001,
-    });
-    animate(cameraLookAtX, menuOpened ? 5 : 0, {
-      type: "string",
-      mass: 5,
-      stiffness: 500,
-      damping: 55,
-      restDelta: 0.0001,
-    });
-  }, [menuOpened]);
-
-  useFrame((state) => {
-    state.camera.position.x = cameraPositionX.get();
-    state.camera.lookAt(cameraLookAtX.get(), 0, 0);
+useEffect(() => {
+  animate(cameraPositionX, menuOpened ? 5 : 45, {
+    mass: 4,
+    stiffness: 300,
+    damping: 30,
+    restDelta: 0.0001,
   });
+  animate(cameraLookAtX, menuOpened ? 5 : 0, {
+    mass: 4,
+    stiffness: 300,
+    damping: 30,
+    restDelta: 0.0001,
+  });
+}, [menuOpened]);
+
+useFrame((state) => {
+  state.camera.position.x = cameraPositionX.get();
+  state.camera.lookAt(cameraLookAtX.get(), 0, 0);
+});
 
   const scale = menuOpened
     ? [devroomScaleRatio * 0.65, devroomScaleRatio * 0.65, devroomScaleRatio * 0.65]
@@ -47,20 +43,8 @@ export const Experience = (props) => {
 
   // Adjust the position based on menuOpened and isMobile
   const position = menuOpened
-    ? [isMobile ? 2.5 : 7.5 * devroomScaleRatio, isMobile ? -viewport.height / 6 : 0, isMobile? 2 : 4]
+    ? [isMobile ? 2.5 : 8.5 * devroomScaleRatio, isMobile ? -viewport.height / 6 : 0, isMobile? 2 : 4]
     : [isMobile ? 2.0 : 10 * devroomScaleRatio, isMobile ? -viewport.height / 6 : 0, isMobile ? 2 : 3];
-
-  // const orbitControls = isMobile ? null : (
-  //     <OrbitControls
-  //       enableDamping
-  //       dampingFactor={0.25}
-  //       target={[1, 2.5, 4.5]}
-  //       initialPosition={[40, 20, 20]}
-  //       enableZoom={false}
-  //       enableRotate={false}
-  //       enablePan={false}
-  //     />
-  // );
 
   const officePosition = isMobile ? [0, -5, -1.2] : [0, -0.5, -1.2];
   const avatarPosition = isMobile ? [-0.6, -4, -2.7] : [-0.6, 0.6, -2.7];
@@ -74,7 +58,7 @@ export const Experience = (props) => {
           y: isMobile ? -viewport.height / 8 : 0,
         }}
       >
-        <ambientLight intensity={1} />
+        <ambientLight intensity={3} />
 
         <Office 
           position={officePosition}

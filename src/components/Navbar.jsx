@@ -3,6 +3,7 @@ import resume from "../assets/tech/resume.png"
 import linkedin from "../assets/tech/linkedin.png"
 import email from "../assets/tech/email-icon.png"
 import myresume from "../assets/tech/Sydney_Nguyen_Resume.pdf"
+import { motion } from "framer-motion"
 
 export const Nav = (props) => {
     const { onSectionChange, menuOpened, setMenuOpened } = props;
@@ -87,7 +88,7 @@ const MenuTitles = (props) => {
 const MenuIcons = (props) => {
   const { url, icon, label } = props;
   return (
-    <a
+    <motion.a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
@@ -96,6 +97,6 @@ const MenuIcons = (props) => {
       whileTap={{ scale: 0.95 }}
     >
       <img src={icon} alt={label} className="w-6 h-6" />
-    </a>
+    </motion.a>
   );
 };

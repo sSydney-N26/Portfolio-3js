@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { technologies } from "../constants/work.js";
 import { BallCanvas } from "./canvas";
@@ -14,7 +13,7 @@ const Section = (props) => {
   const { children, mobileTop } = props;
 
   return (
-    <motion.section className={`w-screen p-5 ml-10 mr-10 max-w-screen-2xl min-h-screen mx-auto
+    <motion.section className={`w-screen p-5 px-10 max-w-screen-2xl min-h-screen mx-auto
      flex flex-col items-start
      ${mobileTop ? "justify-start md:justify-center" : "justify-center"}`}
      initial={{
@@ -38,9 +37,9 @@ const EntryPage = (props) => {
   const { setSection } = props; 
   return (
     <Section mobileTop>
-      <motion.h1 className="lg:text-6xl md:text-4xl text-4xl text-center ml-20
-                            lg:mt-0 md:mt-0 mt-10 md:mx-20 text-gray-900 
-                            font-extrabold"
+      <motion.h1 className="text-4xl sm:text-5xl lg:text-6xl
+           px-5 sm:px-12 ml-7 sm:ml-0 md:mx-20
+           mt-10 md:mt-0 lg:mt-5 text-gray-900 font-extrabold"
            initial={{
             opacity: 0,  
             y: 25 
@@ -49,79 +48,64 @@ const EntryPage = (props) => {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.5,
-                delay: 0.5,
+                duration: 1.25,
+                delay: 1,
             }
          }}>
         Hi, I am
         <br />
-        <span className="lg:px-2 lg:py-2 md:text-4xl text-3xl font-extrabold text-pink-700 px-1 py-1
+        <span className="lg:px-6 lg:py-3 lg:text-4xl md:text-4xl text-3xl font-extrabold text-pink-700 px-1 py-1
                         bg-white italic inline-block rounded-lg shadow-lg md:mx-3 md:mt-3"> Sydney ! </span>
         </motion.h1>
 
-        <motion.p className="lg:text-[14px] lg:my-3 lg:mx-11
-        md:my-3 md:mx-15 text-center text-gray-800 my-5 mx-10  
-        md:text-[12px] sm:text-[11px] xs:text-[11px] text-[11px]"
-           initial={{
-            opacity: 0,  
-            y: 25,
-         }}
-         whileInView={{
+        <motion.div
+          className="flex flex-col items-center text-left text-gray-800
+                    my-6 mx-0 lg:mx-5 md:mx-5 w-full max-w-md"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{
             opacity: 1,
             y: 0,
-            transition: {
-                duration: 0.5,
-                delay: 1.0,
-            }
-         }}>
-         
-        <br />
-        I’m a third‑year Honours Computer Science
-        <br /> 
-        and Business Administration double‑degree 
-        <br />
-        student at the University of Waterloo and 
-        <br />
-        Wilfrid Laurier University. I have experience
-        <br />
-        building web apps and agent‑based 
-        <br />
-        cybersecurity tools. Most recently, I spent four  
-        <br />
-        months at Shopify where I built large‑scale
-        <br />
-        device security workflows and dived into mobile
-        <br />
-        development as well. I’m looking to deepen my
-        <br />
-        AI/ML knowledge and tackle the next frontier
-        <br />
-        of immersive experiences!
-        
-        </motion.p>
+            transition: { duration: 1.25, delay: 1.5 }
+          }}
+        >
+          {[
+            "I’m a 3rd year Honours Computer Science",
+            "and Business Administration double‑degree",
+            "student at the University of Waterloo and",
+            "Wilfrid Laurier knowledge University. I’m",
+            "looking to deepen my AI/ML knowledge",
+            "and building immersive experiences!"
+          ].map((line, idx) => (
+            <div
+              key={idx}
+              className="bg-white py-1 rounded-xl shadow-sm text-center mb-3 text-[12px] sm:text-[14px] md:text-[15px]
+              lg:text-[16px]"
+              style={{
+                width: "100%",
+                maxWidth: "400px" // matches typical h1/button text width
+              }}
+            >
+              {line}
+            </div>
+          ))}
 
-        <motion.button 
+        <motion.button
           onClick={() => setSection(5)}
-          className="lg:ml-26 lg:py-4 lg:px-16 lg:my-6
-          text-white bg-pink-700 mx-20 md:my-3
-          py-3 px-8 rounded-lg font-bold text-lg md:mx-30 md:py-3 md:px-12"
-           initial={{
-            opacity: 0,
-            y: 25 
-           }}
-            whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                    duration: 0.5,
-                    delay: 1.5,
-                }
-            }}> Let's Chat!
+          className="py-3 px-16 rounded-lg font-bold text-lg mr-8
+                    text-white bg-pink-700 mt-3 hover:bg-pink-800"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1.25, delay: 2 }
+          }}
+        >
+          Let's Chat!
         </motion.button>
+      </motion.div>
     </Section>
   );
 };
-
 
 const SkillsSection = () => {
     return (

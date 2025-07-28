@@ -12,7 +12,7 @@ export const ProgressScreen = (props) => {
         if (progress == 100) {
             setTimeout(() => {
                 setStarted(true);
-            }, 700);
+            }, 1000);
         }
     }, [progress, total, loaded, item]);
 
