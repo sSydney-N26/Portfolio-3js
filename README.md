@@ -1,10 +1,7 @@
-# r3f-vite-starter
-A boilerplate to build R3F projects
+Welcome to my Personal Website! 👋
 
-```
-yarn
-yarn dev
-```
+<img width="927" height="657" alt="image" src="https://github.com/user-attachments/assets/6626111d-27a1-43da-8d3d-193bccce5eeb" />
 
+<img width="1913" height="869" alt="image" src="https://github.com/user-attachments/assets/6e1e3d5f-595b-4732-8857-eb53fa99cf5f" />
 
-![image](https://user-images.githubusercontent.com/6551176/221732091-23ee52cb-4150-42fa-b998-43628d7a6b0d.png)
+https://sydney-nguyen.netlify.app/
